@@ -5,20 +5,20 @@
 
 int main(void) {
 
-	int grade[N_STUDENT];
-	int score[N_STUDENT];
+	int a[N_STUDENT] = {1,2,3,4,5};
+	int b[N_STUDENT] = { 1,2,3,4,6 };
 	int i;
+	int flag = 0; 
 	
-	for (i = 0; i < N_STUDENT; i++)
-		grade[i] = rand() % 100 +1;
-	//grade -> score copy
-
-	for (i = 0; i < N_STUDENT; i++)
-		score[i] = grade[i];
+	for (i = 0; i < N_STUDENT; i++) {
 	
-	for (i = 0; i < N_STUDENT; i++)
-		printf("score[%d] = %d (grade:%i)\n", i, score[i]);
-
+		if (a[i] != b[i]) { //not one is
+			printf("array a and b are not the same");
+			flag = 1;
+		}
+		else
+			printf("array a and b are the same");
+	}
 	
 	return 0;
 }
