@@ -7,9 +7,11 @@ int main(void) {
 
 	int grade[N_STUDENT];
 	int i;
+	printf("inpit 5 scores");
+
 
 	for (i = 0; i < N_STUDENT; i++)
-		grade[i] = (i + 1) * 10;
+		scanf_s("%d", &grade[i]);
 
 	for (i = 0; i < N_STUDENT; i++)
 		printf("grade[%i] = %i\n", i, grade[i]);
